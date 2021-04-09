@@ -1,6 +1,6 @@
 const fs = require('fs');
-const encrypt = require('./encrypt');
-const decrypt = require('./decrypt');
+const encrypt = require('../encrypt');
+const decrypt = require('../decrypt');
 const publicKey = fs.readFileSync(__dirname + '/../id_rsa_pub.pem', 'utf8');
 const encryptedMessage = encrypt.encryptWithPublicKey(publicKey, 'My secret message');
 
